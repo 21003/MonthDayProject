@@ -8,9 +8,10 @@ public class Main {
 	Scanner keyboard;
 	keyboard = new Scanner(System.in);
 
-	String userMonth;
-	String userDay1;
-	String userYear;
+	int userYear1;
+	int userMonth;
+	int userDay;
+	int userYear2;
 
         System.out.println("Monday's child is fare of face,");
         System.out.println("Tusday's child is full of grace,");
@@ -23,19 +24,78 @@ public class Main {
         System.out.println("");
         System.out.println("Lets see what day you where born on");
         System.out.println("What month were you born (As a number)");
-        userMonth = keyboard.nextLine();
+        userMonth = keyboard.nextInt();
+
+
         System.out.println("What day in that month were you born");
-        userDay1 = keyboard.nextLine();
+        userDay = keyboard.nextInt();
         System.out.println("What year were you born");
-        userYear = keyboard.ne
+        userYear1 = keyboard.nextInt();
 
 
 
+        }
+        //method that will take the number for the month
+        //return the written month
+
+    public static String printMonth(int userMonth) {
 
 
-
-
+        switch (userMonth) {
+            case '1':
+                System.out.println("");
+                break;
+            case '2':
+                System.out.println("");
+                break;
+            case '3':
+                System.out.println("");
+                break;
+            case '4':
+                System.out.println("");
+                break;
+            case '5':
+                System.out.println("");
+                break;
+            case '6':
+                System.out.println("");
+                break;
+            case '7':
+                System.out.println("");
+                break;
+            case '8' :
+                System.out.println("");
+                break;
+            case '9' :
+                System.out.println("");
+                break;
+            case '10' :
+                System.out.println("");
+                break;
+            case '11' :
+                System.out.println("");
+                break;
+            case '12' :
+                System.out.println("");
+                break;
+           
+        }
 
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
