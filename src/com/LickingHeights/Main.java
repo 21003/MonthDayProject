@@ -27,7 +27,7 @@ public class Main {
         userMonth = keyboard.nextInt();
 
 
-        System.out.println("What day in that month were you born");
+        System.out.println("What day in "+printMonth(userMonth)+" were you born");
         userDay = keyboard.nextInt();
         System.out.println("What year were you born");
         userYear1 = keyboard.nextInt();
@@ -41,44 +41,35 @@ public class Main {
     public static String printMonth(int userMonth) {
 
 
+
         switch (userMonth) {
-            case '1':
-                System.out.println("");
-                break;
-            case '2':
-                System.out.println("");
-                break;
-            case '3':
-                System.out.println("");
-                break;
-            case '4':
-                System.out.println("");
-                break;
-            case '5':
-                System.out.println("");
-                break;
-            case '6':
-                System.out.println("");
-                break;
-            case '7':
-                System.out.println("");
-                break;
-            case '8' :
-                System.out.println("");
-                break;
-            case '9' :
-                System.out.println("");
-                break;
-            case '10' :
-                System.out.println("");
-                break;
-            case '11' :
-                System.out.println("");
-                break;
-            case '12' :
-                System.out.println("");
-                break;
-           
+            case 1:
+                return "January";
+            case 2 :
+                return "February";
+            case 3 :
+                return "March";
+            case 4 :
+                return "April";
+            case 5 :
+                return "May";
+            case 6 :
+                return "June";
+            case 7 :
+                return "July";
+            case 8 :
+                return "August";
+            case 9 :
+                return "September";
+            case 10 :
+                return "Octeber";
+            case 11 :
+                return "November";
+            case 12 :
+                return "December";
+            default :
+                return "";
+
         }
 
 
