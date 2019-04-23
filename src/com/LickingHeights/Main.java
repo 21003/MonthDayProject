@@ -1,6 +1,5 @@
 package com.LickingHeights;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner keyboard;
         keyboard = new Scanner(System.in);
+
 
         int userYear1;
         int userMonth;
@@ -38,8 +38,9 @@ public class Main {
         userYear1 = keyboard.nextInt();
 
 
-        System.out.println("Their are "+monthDays(userMonth)+" days in "+printMonth(userMonth)+"");
+        System.out.println("There are " + monthDays(userMonth) + " days in " + printMonth(userMonth) + "");
 
+        System.out.println("You were born on a " + weekDayName(weekday);
 
 
     }
@@ -66,31 +67,53 @@ public class Main {
                 return userMonth;
 
             default:
-                return 41;
+                return (0);
+
         }
 
 
     }
 
     public static int weekDay(int userDay, int userMonth2, int userYear1) {
-            userMonth2 = userMonth2(userMonth2);
-        if(userMonth2 >12){
-           userYear1--;
+        userMonth2 = userMonth2(userMonth2);
+        if (userMonth2 > 12) {
+            userYear1--;
         }
 
         int K = (userYear1 % 100);
         int J = (userYear1 / 100);
 
-        int weekDay = userDay + (13 * (userMonth2 + 1)) / 5 + K + (K / 4) + (J / 4) - (-2 * J);
+        int weekDay = (userDay + (13 * (userMonth2 + 1)) / 5 + K + (K / 4) + (J / 4) - (2 * J)) % 7;
+
 
         return weekDay;
 
 
     }
 
+    public static String weekDayName (int weekday){
 
-    //method that will take the number for the month
-    //return the written month
+        switch (weekday){
+            case 0:
+            return "Saturday";
+            case 1:
+            return "Sunday";
+            case 2:
+            return "Monday";
+            case 3:
+            return "Tuesday";
+            case 4:
+            return "Wednesday";
+            case 5:
+            return "Thursday";
+            case 6:
+            return "Firday";
+            default:
+                return "";
+        }
+
+    }
+
 
     public static String printMonth(int userMonth) {
 
@@ -126,37 +149,42 @@ public class Main {
         }
     }
 
-    public static int monthDays (int userMonth){
+    public static int monthDays(int userMonth) {
 
 
-        switch (userMonth){
-             case 1:
-           return 31;
-             case 2:
-           return 28;
-             case 3:
-           return 31;
-             case 4:
-           return 30;
-             case 5:
-           return 31;
-             case 6:
-           return 31;
-             case 7:
-           return 31;
-             case 8:
-           return 31;
-             case 9:
-           return 30;
-             case 10:
-           return 31;
-             case 11:
-           return 30;
-             case 12:
-           return 31;
-           }
+        switch (userMonth) {
+            case 1:
+                return 31;
+            case 2:
+                return 28;
+            case 3:
+                return 31;
+            case 4:
+                return 30;
+            case 5:
+                return 31;
+            case 6:
+                return 31;
+            case 7:
+                return 31;
+            case 8:
+                return 31;
+            case 9:
+                return 30;
+            case 10:
+                return 31;
+            case 11:
+                return 30;
+            case 12:
+                return 31;
+        }
+
+        return monthDays(userMonth);
+
     }
 }
+
+
 
 
 
