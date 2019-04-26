@@ -38,27 +38,22 @@ public class Main {
 
     public static int weekDay(int userDay, int userMonth2, int userYear1) {
 
-        System.out.println("\n\n\n\n__________________________________________________________________________________");
-        System.out.println("Month before method to change January and February: "+ userMonth2);
         userMonth2 = userMonth2(userMonth2);
-        System.out.println("Month after method to change January and February: "+ userMonth2);
-        System.out.println("year before method to decrease Year for Jan and Feb: "+ userYear1);
         if (userMonth2 > 12) {
             userYear1--;
         }
-        System.out.println("year after method to decrease Year for Jan and Feb: "+ userYear1);
+
 
         int K = (userYear1 % 100);
         int J = (userYear1 / 100);
 
-        System.out.println("K: " + K + " J: "+ J);
+
 
         int weekDay = (userDay + (13 * (userMonth2 + 1)) / 5 + K + (K / 4) + (J / 4) + (5 * J));
-        System.out.println("Calc of weekday before modulus: "+ weekDay);
-        weekDay %=7;
-        System.out.println("Calc of weekday after modulus: "+ weekDay);
 
-        System.out.println("__________________________________________________________________________________\n\n\n\n");
+        weekDay %=7;
+
+
         return weekDay;
 
 
@@ -193,6 +188,16 @@ public class Main {
 
 
         while (true) {
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+
+
+
+
+
             System.out.println("Monday's child is fare of face,");
             System.out.println("Tusday's child is full of grace,");
             System.out.println("Wednesday's child is full of woe,");
